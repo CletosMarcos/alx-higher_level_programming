@@ -4,7 +4,7 @@ number = random.randint(-10000, 10000)
 sentnc = ""
 
 if (number < 0):
-    ld = (number * -1) % 10
+    ld = -(-number % 10)
 else:
     ld = number % 10
 
