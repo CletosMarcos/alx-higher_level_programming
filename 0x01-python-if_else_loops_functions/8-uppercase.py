@@ -2,7 +2,7 @@
 
 def uppercase(str):
     if len(str) == 0:
-        print("{}".format("\n"), end="")
+        print()
     for i in range(len(str)):
         print("{}".format((chr(ord(str[i])-32)
               if i < len(str)-1 else (chr(ord(str[i])-32))+"\n")
