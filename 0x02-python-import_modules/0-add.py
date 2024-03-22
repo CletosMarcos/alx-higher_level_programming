@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-if __name__ == "__main__":
+f_add = __import__('add_0').add
 
-    f_add = __import__('add_0').add
+if __name__ == "__main__":
 
     f_add.a = 1
     f_add.b = 2
