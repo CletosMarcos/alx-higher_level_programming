@@ -10,8 +10,8 @@ def print_matrix_integer(matrix=[[]]):
             count += 1
 
             if count < row_size:
-                print("{}".format(col), end=" ")
+                print("{:d}".format(col), end=" ")
             else:
-                print("{}".format(col), end="")
+                print("{:d}".format(col), end="")
 
         print()
