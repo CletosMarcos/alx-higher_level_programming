@@ -10,4 +10,4 @@ def max_integer(my_list=[]):
             if nr > max_nr:
                 max_nr = nr
 
-        return max_nr
+        return int(max_nr)
