@@ -4,6 +4,24 @@
 
 
 class Node:
+
+        """Define a node of a singly linked list
+
+    Attributes:
+        __data (int): Private instance attribute representin
+            the data stored in the node.
+        __next_node (Node or None): Private instance attribute
+            representing the next node in the linked list.
+
+    Methods:
+        data: Property method to retrive the data stored in the node.
+        data.setter: Setter method to set the data stored in the node.
+        next_node: Property method to retrieve the next node
+                    in the linked list.
+        next_node.setter: Setter method to set the next node
+                    in the linked list.
+    """
+
     def __init__(self, data, next_node=None):
         """ initializes atributes.
             
