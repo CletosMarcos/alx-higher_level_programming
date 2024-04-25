@@ -49,6 +49,10 @@ class Square:
 
     """ Prints the square with the character #."""
     def my_print(self):
+        if self.__size == 0:
+            print()
+            return
+
         [print() for p in range(self.__position[1])]
 
         for i in range(self.__size):
@@ -56,7 +60,4 @@ class Square:
                 print(" ", end='')
             for j in range(self.__size):
                 print("#", end='')
-            print()
-
-        if self.__size == 0:
             print()
