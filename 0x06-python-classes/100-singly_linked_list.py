@@ -5,13 +5,19 @@
 
 class Node:
     def __init__(self, data, next_node=None):
-        """ initializes atributes."""
+        """ initializes atributes.
+            
+            args:
+                int: __data
+                Node: next_node. """
         self.__data = data
         self.__next_node = next_node
 
     @property
     def data(self):
-        """ retrieves data value."""
+        """ retrieves data value.
+            
+            returns an int"""
         return self.__data
 
     @data.setter
@@ -24,12 +30,17 @@ class Node:
 
     @property
     def next_node(self):
-        """ retrieves next_node value."""
+        """ retrieves next_node value.
+
+            returns a Node"""
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
-        """ sets next_node."""
+        """ sets next_node.
+
+            args:
+                Node: value"""
         if value is None or isinstance(value, self):
             self.__next_node = value
         else:
