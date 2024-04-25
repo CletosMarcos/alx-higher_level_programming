@@ -5,9 +5,9 @@
 
 class Square:
     """ Initializes the square."""
-    def __init__(self, size=0, position=(0,0)):
-        self.__size = size
-        self.__position = position
+    def __init__(self, size=0, position=(0, 0)):
+        self.size = size
+        self.position = position
 
     """ size getter method."""
     @property
@@ -43,7 +43,6 @@ class Square:
 
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
-
 
     """ Determines the current area."""
     def area(self):
