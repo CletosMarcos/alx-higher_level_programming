@@ -40,7 +40,14 @@ class Node:
 
     @data.setter
     def data(self, value):
-        """ sets the data atribute by the condition of it being ant int type."""
+        """Sets the data stored in the node.
+
+        Args:
+            value (int): The data to be set in the node.
+
+        Raises:
+            TypeError: If the provided value is not an integer.
+        """
         if type(value) is int:
             self.__data = value
         else:
@@ -55,14 +62,19 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        """ sets next_node.
+        """Sets the next node in the linked list
 
-            args:
-                Node: value"""
+        Args:
+            value (Node or None): The next node in the linked list.
+
+        Raises:
+            TypeError: If the provided value is not None or a Node object.
+        """
         if value is None or isinstance(value, self):
             self.__next_node = value
         else:
             raise TypeError("next_node must be a Node object")
+
 
 """ class SinglyLinkedList that defines a singly linked list."""
 
