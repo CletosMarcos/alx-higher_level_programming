@@ -23,7 +23,7 @@ class Node:
 
     def __init__(self, data, next_node=None):
         """ initializes atributes.
-            
+
             args:
                 int: __data
                 Node: next_node. """
@@ -33,7 +33,7 @@ class Node:
     @property
     def data(self):
         """ retrieves data value.
-            
+
             returns an int"""
         return self.__data
 
@@ -111,4 +111,4 @@ class SinglyLinkedList:
         while current is not None:
             result.append(str(current.data))
             current = current.next_node
-        return '\n'.join(result) 
+        return '\n'.join(result)
