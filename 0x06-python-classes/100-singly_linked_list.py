@@ -4,8 +4,7 @@
 
 
 class Node:
-
-        """Define a node of a singly linked list
+    """Define a node of a singly linked list
 
     Attributes:
         __data (int): Private instance attribute representin
