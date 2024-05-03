@@ -30,18 +30,23 @@ class Square:
     def __eq__(self, other):
         """Verify based on Square area if instances are equal."""
         return self.__size == other.__size
+
     def __ne__(self, other):
         """Verify if instances area is (!=) Not equal/different."""
         return self.__size != other.__size
+
     def __gt__(self, other):
         """Verify if instances area are >."""
         return self.__size > other.__size
+
     def __lt__(self, other):
         """Verify is instances area are >."""
         return self.__size < other.__size
+
     def __le__(self, other):
         """Verify if instances are are <=."""
         return self.__size <= other.__size
-    def __ge__(self,other):
+
+    def __ge__(self, other):
         """verify if instancesarea are >=."""
         return self.__size >= other.size
