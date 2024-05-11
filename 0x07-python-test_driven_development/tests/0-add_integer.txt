@@ -1,103 +1,60 @@
-=============================
-How to use 0-add_integer.txt
-=============================
+==================================
+| TEST CASES FOR THE ADD FUNCTION |
+==================================
 
-This module defines an integer addicion function ``add_integer(a, b=98)``,
+It is supposed for the function to return an integer, resulting
+from the add of a and b
 
 Numbers
 =======
-
-``add_integer(...)`` Returns the addition of its arguments. For numbers
-that value is equivalent to using the ``+``operator.
-
-::
-
+	
 	>>> add_integer = __import__('0-add_integer').add_integer
-	>>> add_integer(1, 3)
-	4
+	>>> add_integer(2, 3)
+	5
+	>>> add_integer(5, 4.0)
+	9
 
-::
+Trying out some Negative numbers
 
-	>>> add_integer(1, -3)
-	-2
-
-It also works with floating point values.
-
-::
-
-	>>> add_integer(1.0, 3.0)
-	4
-
-Note that floats are casted to ints before addition is performed.
-
-::
-
-	>>> add_integer(1.6, 3.4)
-	4
-
-	>>> add_integer(-2.5, 3.0)
-	1
-
-Floating and non-floating point can be combined.
-
-::
-
-	>>> add_integer(2.4, 5)
-	7
-
-	>>> add_integer(-3, 3.53)
+	>>> add_integer(-1, 0)
+	-1
+	>>> add_integer(-2.5, 5.2)
+	3
+	>>> add_integer(-98.99)
 	0
 
-The second argument is optional, when not passed it assumes by default the number 98.
+Trying Strings and non_numbers
 
+	>>> add_integer('number', 5)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
 
-::
+	>>> add_integer(3, 'string')
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+if both are non_numbers, raise a error for the first one
+
+	>>> add_integer(None, 'anything')
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+as the function assumes b = 98 if not passed, ignoring the second parameter
 
 	>>> add_integer(2)
 	100
 
-Non-Numbers
-===========
+if first parameter is not passed
 
-``add_integer()`` expects that both arguments are either integers or floats.
-If either argument is non-integer and non-float, a TypeError is raised.
-
-::
-
-	>>> add_integer('hello', 2)
+	>>> add_integer()
 	Traceback (most recent call last):
-	TypeError: a must be an integer
-
-	>>> add_integer('hello')
-        Traceback (most recent call last):
-        TypeError: a must be an integer
-
-	>>> add_integer(None)
-        Traceback (most recent call last):
-        TypeError: a must be an integer
-
-	>>> add_integer(2, 'world')
-        Traceback (most recent call last):
-        TypeError: b must be an integer
-
-If both arguments are non-integers and non-floats, a TypeError message is only
-printed for the first argument.
-
-::
-
-	>>> add_integer('hello', 'there')
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+	TypeError: add_integer() missing 1 required positional argument: 'a'
 
 The function will fail if infinity is provided.
-
-::
 
 	>>> add_integer(float('inf'))
 	Traceback (most recent call last):
 	OverflowError: cannot convert float infinity to integer
-
-::
 
 	>>> add_integer(2, float('inf'))
 	Traceback (most recent call last):
