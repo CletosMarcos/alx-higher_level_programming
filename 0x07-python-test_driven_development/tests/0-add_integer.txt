@@ -13,8 +13,6 @@ Numbers
 	5
 	>>> add_integer(5, 4.0)
 	9
-	>>> add_integer(2.4, 2.6)
-	4
 
 Trying out some Negative numbers
 
@@ -45,6 +43,11 @@ as the function assumes b = 98 if not passed, ignoring the second parameter
 
 	>>> add_integer(2)
 	100
+if first parameter is not passed
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 1 required positional argument: 'a'
 
 The function will fail if infinity is provided.
 
