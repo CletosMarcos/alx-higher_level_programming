@@ -43,6 +43,7 @@ as the function assumes b = 98 if not passed, ignoring the second parameter
 
 	>>> add_integer(2)
 	100
+
 if first parameter is not passed
 
 	>>> add_integer()
