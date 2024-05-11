@@ -41,7 +41,7 @@ if both are non_numbers, raise a error for the first one
 
 as the function assumes b = 98 if not passed, ignoring the second parameter
 
-	'>>> add_integer(2)
+	>>> add_integer(2)
 	100
 
 The function will fail if infinity is provided.
