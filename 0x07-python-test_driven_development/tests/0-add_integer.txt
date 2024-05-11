@@ -60,8 +60,7 @@ The function will fail if infinity is provided.
 	Traceback (most recent call last):
 	OverflowError: cannot convert float infinity to integer
 
-A test case for an argument with no assigned value
+A test case to check the returned integer type
 
-	>>> add_integer(a, 123)
-	Traceback (most recent call last):
-	NameError: name 'a' is not defined
+	>>> type(add_integer(5, 5))
+	<class 'int'>
