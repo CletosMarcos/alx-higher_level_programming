@@ -4,6 +4,7 @@
 module containing an ADD function
 """
 
+
 def add_integer(a, b=98):
     """ computes the addition of a and b
 
@@ -11,6 +12,7 @@ def add_integer(a, b=98):
               if not must raise TypeError Exception
         Return: an integer a + b
     """
+
     typevar = [int, float]
 
     if type(a) not in typevar:
@@ -18,4 +20,7 @@ def add_integer(a, b=98):
     if type(b) not in typevar:
         raise TypeError("b must be an integer")
 
-    return int(a + b)
+    a = int(a)
+    b = int(b)
+
+    return a + b
