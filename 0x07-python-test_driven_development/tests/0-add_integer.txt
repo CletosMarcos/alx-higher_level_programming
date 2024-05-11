@@ -38,3 +38,18 @@ if both are non_numbers, raise a error for the first one
 	>>> add_integer(None, 'anything')
 	Traceback (most recent call last):
 	TypeError: a must be an integer
+
+as the function assumes b = 98 if not passed, ignoring the second parameter
+
+	>>> add_integer(2)
+	100
+
+The function will fail if infinity is provided.
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(2, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
