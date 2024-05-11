@@ -46,9 +46,9 @@ as the function assumes b = 98 if not passed, ignoring the second parameter
 
 The function will fail if infinity is provided.
 
-	>>> add_integer(float('inf'))
-	Traceback (most recent call last):
-	OverflowError: cannot convert float infinity to integer
+	'>>> add_integer(float('inf'))
+	'Traceback (most recent call last):
+	'OverflowError: cannot convert float infinity to integer
 
 	'>>> add_integer(2, float('inf'))
 	'Traceback (most recent call last):
