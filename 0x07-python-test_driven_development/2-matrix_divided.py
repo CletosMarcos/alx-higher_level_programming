@@ -20,19 +20,23 @@ def matrix_divided(matrix, div):
     """
 
     types = [int, float]
+    msg = "matrix_divided() missing 1 required positional argument: 'matrix'"
+    msg_2 = "matrix must be a matrix (list of lists) of integers/floats"
+    if not matrix:
+        raise TypeError(msg)
 
     if type(matrix) is not list:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(msg_2)
 
     for i in matrix:
         if type(i) is not list:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError(msg_2)
         elif len(matrix[0]) != len(i):
             raise TypeError("Each row of the matrix must have the same size")
         else:
             for j in i:
                 if type(j) not in types:
-                    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                    raise TypeError(msg_2)
 
     if type(div) not in types:
         raise TypeError("div must be a number")
