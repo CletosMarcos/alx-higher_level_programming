@@ -1,0 +1,73 @@
+===============================
+| 2-matrix_divided Test cases |
+===============================
+
+The module 2-matrix_divided computes the division of all elements 
+of a matrix and returns the new matrix
+
+=>	all the rows of the matrix must be the same size
+
+IMPORT MODULE
+=============
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+EMPTY PARAMETER FIELDS
+======================
+
+Test Case 1: lacking both arguments
+	>>> matrix_divided()
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Test Case 2: first argument "matrix" empty
+	>>> matrix_divided([[1, 3], [6, 8, 10]], )
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+NOT WORKING ARGUMENTS
+=====================
+
+Test Case 3: different row sizes (first arg)
+	>>> matrix_divided([[1, 3], [6, 8, 10]], 3)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+
+Test Case 4: division by zero (second arg)
+	>>> matrix_divided([[1, 3], [6, 10]], 0)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+Test Case 5: not list of lists
+	>>> matrix_divided([[1, 3], 4, [6, 10]], 3)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test Case 6: a list of lists but containing not floats/ints
+	>>> matrix_divided([[1, 3], ['Hello', 6]], 5.0)
+        Traceback (most recent call last):
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test Case 7: div not a number
+	>>> matrix_divided([[1, 3], [6, 10]], 'Hi')
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+
+WORKING SCENARIOS
+=================
+
+Test Case 8: 
+	>>> matrix_divided([[1, 3], [6, 10]], 3)
+	[[0.33, 1.0], [2.0, 3.33]]
+
+Test Case 9:
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Test Case 10:
+	>>> matrix_divided([[1, 2.35, 3, 4.88, 5, 6], [7.5, 8, 9.2, 10, 11, 12.8]], 5.2)
+	[[0.19, 0.45, 0.58, 0.94, 0.96, 1.15], [1.44, 1.54, 1.77, 1.92, 2.12, 2.46]]
+
+Test Case 11:
+	matrix_divided([[2, 4, 6], [8, 10, 12], [20, 30 ,40]], 2)
+	[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [10.0, 15.0, 20.0]]
