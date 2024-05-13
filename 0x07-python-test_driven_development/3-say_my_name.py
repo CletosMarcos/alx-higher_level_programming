@@ -25,4 +25,4 @@ def say_my_name(first_name, last_name=""):
     if not all(char.isalpha() or char.isspace() for char in last_name):
         raise TypeError("last_name must only contain letters")
 
-    print(f"{first_name} {last_name}")
+    print(f"My name is {first_name} {last_name}")
