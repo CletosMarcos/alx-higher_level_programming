@@ -19,9 +19,9 @@ Test Case 2: digit and no second arg
 	TypeError: first_name must be a string
 
 Test Case 3: string with digits on first_name
-	<<< say_my_name("Name1", "OtherName")
-	<Traceback (most recent call last):
-	<TypeError: first_name must only contain strings 
+	>>> say_my_name("Name1", "OtherName")
+	Traceback (most recent call last):
+	TypeError: first_name must only contain letters
 
 Test Case 4: digit on second arg
 	>>> say_my_name("Name", 1)
@@ -29,9 +29,9 @@ Test Case 4: digit on second arg
 	TypeError: last_name must be a string
 
 Test Case 5: string with digit on second arg
-	<<<<< say_my_name("Name", "FailNam3")
-        <Traceback (most recent call last):
-        <TypeError: last_name must only contain strings
+	>>> say_my_name("Name", "FailNam3")
+        Traceback (most recent call last):
+        TypeError: last_name must only contain letters
 
 Test Case 6: None first_name
 	>>> say_my_name(None, )
