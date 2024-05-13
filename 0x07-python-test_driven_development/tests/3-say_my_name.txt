@@ -43,16 +43,16 @@ STRINGS
 
 Test Case 7: only first arg
 	>>> say_my_name("Hello")
-	Hello 
+	My name is Hello 
 
 Test Case 8: both args
 	>>> say_my_name("Cletos", "Marcos")
-	Cletos Marcos
+	My name is Cletos Marcos
 
 Test case 9: empty strings
 	>>> say_my_name("")
-	<BLANKLINE>
+	My name is  
 
 Test Case 10: empty first_name
 	>>> say_my_name("", "Marcos")
-	 Marcos
+	My name is  Marcos
