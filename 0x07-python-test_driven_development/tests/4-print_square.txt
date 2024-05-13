@@ -1,0 +1,48 @@
+==========================
+| TESTS FOR PRINT_SQUARE |
+==========================
+
+Receive a size parameter and print a square of size "size"
+=> "size" must be an int, otherwise raise a TypeError
+=> "size" must be >= 0, if not raise ValueError
+
+IMPORT MODULE
+=============
+
+	>>> print_square = __import('4-print_square').print_square
+
+INVALID SIZE
+============
+
+Test Case 1: float size
+	>>> print_square(4.2)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Test Case 2: negative float
+	>>> print_square(-10.5)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Test Case 3: negative int
+	>>> print(-5)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+Test Case 4: string
+	>>> print_square("number")
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+
+VALID SIZE
+==========
+
+Test Case 5: size 2
+	>>> print_square(2)
+	##
+	##
+
+Test Case 6: size 0
+	>>> print_square(0)
+	<BLANKLINE>
