@@ -34,6 +34,11 @@ Test Case 4: string
 	Traceback (most recent call last):
 	TypeError: size must be an integer
 
+Test Case 5: no argument
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
 
 VALID SIZE
 ==========
