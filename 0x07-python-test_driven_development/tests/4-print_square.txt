@@ -9,7 +9,7 @@ Receive a size parameter and print a square of size "size"
 IMPORT MODULE
 =============
 
-	>>> print_square = __import('4-print_square').print_square
+	>>> print_square = __import__('4-print_square').print_square
 
 INVALID SIZE
 ============
@@ -25,7 +25,7 @@ Test Case 2: negative float
 	TypeError: size must be an integer
 
 Test Case 3: negative int
-	>>> print(-5)
+	>>> print_square(-5)
 	Traceback (most recent call last):
 	ValueError: size must be >= 0
 
