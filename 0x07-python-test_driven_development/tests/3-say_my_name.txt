@@ -1,0 +1,58 @@
+=======================================
+| TEST CASES FOR SAY_MY-NAME FUNCTION |
+=======================================
+
+The function is supposed to get two names,
+first_name and last_name, then print the full name.
+
+The names must be strings, else raise a TypeError
+
+Test Case 1:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+NOT WORKING VALUES
+==================
+
+Test Case 2: digit and no second arg
+	>>> say_my_name(2)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+Test Case 3: string with digits on first_name
+	<<< say_my_name("Name1", "OtherName")
+	<Traceback (most recent call last):
+	<TypeError: first_name must only contain strings 
+
+Test Case 4: digit on second arg
+	>>> say_my_name("Name", 1)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+Test Case 5: string with digit on second arg
+	<<<<< say_my_name("Name", "FailNam3")
+        <Traceback (most recent call last):
+        <TypeError: last_name must only contain strings
+
+Test Case 6: None first_name
+	>>> say_my_name(None, )
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+STRINGS
+=======
+
+Test Case 7: only first arg
+	>>> say_my_name("Hello")
+	Hello 
+
+Test Case 8: both args
+	>>> say_my_name("Cletos", "Marcos")
+	Cletos Marcos
+
+Test case 9: empty strings
+	>>> say_my_name("")
+	<BLANKLINE>
+
+Test Case 10: empty first_name
+	>>> say_my_name("", "Marcos")
+	 Marcos
