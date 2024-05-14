@@ -87,7 +87,7 @@ Test Case 7:
 	Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
 Test Case 8:
-	>>> text_indentation("This\n     is: an \nexcessive     space  text") #doctest: +REPORT_NDIFF
+	>> text_indentation("This\n     is: an \nexcessive     space  text") #doctest: +REPORT_NDIFF
 	This
 	is:
 	<BLANKLINE>
