@@ -6,6 +6,7 @@ This module provides a funcion that prints a text with 2 new lines after each
 of these characters `. ? :`
 """
 
+
 def text_indentation(text):
     """ Prints two new Lines if it finds the following chars ". : ?"
 
