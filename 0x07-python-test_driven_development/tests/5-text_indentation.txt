@@ -24,7 +24,12 @@ Test Case 3: number arg
 	Traceback (most recent call last):
 	TypeError: text must be a string
 
-Test Case 4: list as arg
+Test Case 4: None arg
+        >>> text_indentation(None)
+        Traceback (most recent call last):
+        TypeError: text must be a string
+
+Test Case 5: list as arg
 	>>> text_indentation(["la","la","lah"])
 	Traceback (most recent call last):
 	TypeError: text must be a string
@@ -33,7 +38,7 @@ Test Case 4: list as arg
 WORKING VALUES
 ==============
 
-Test Case 5:
+Test Case 6:
 	>>> text_indentation("Hi. My Name is: Cletos")
 	Hi.
 	<BLANKLINE>
@@ -41,14 +46,14 @@ Test Case 5:
 	<BLANKLINE>
 	Cletos
 
-Test Case 6:
+Test Case 7:
 	>>> text_indentation("Really? Mine too.")
 	Really?
 	<BLANKLINE>
 	Mine too.
 	<BLANKLINE>
 
-Test Case 7:
+Test Case 8:
 	>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
 	... "Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? "
 	... "Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: "
@@ -86,15 +91,13 @@ Test Case 7:
 	<BLANKLINE>
 	Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
-Test Case 8:
-	>> text_indentation("This\n     is: an \nexcessive     space  text") #doctest: +REPORT_NDIFF
-	This
-	is:
-	<BLANKLINE>
-	an
-	excessive space text
-
 Test Case 9:
+	>>> text_indentation("This     is: an excessive     space  text") #doctest: +REPORT_NDIFF
+	This is:
+	<BLANKLINE>
+	an excessive space text
+
+Test Case 10:
 	>>> text_indentation("Boa tarde. Chamo-me Cletos e sou um estudante de engenharia. "
 	... "quando vou terminar? perguntam, mas nem eu sei a resposta. who knows") #doctest: +REPORT_NDIFF
 	Boa tarde.
