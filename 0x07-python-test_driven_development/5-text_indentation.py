@@ -25,19 +25,16 @@ def text_indentation(text):
     new_text = ""
     chars = (".", ":", "?")
 
-    while pos < len(text) and text[pos] == " ":
-        pos += 1
+    while c < len(text) and text[c] == ' ':
+        c += 1
 
-    while pos < len(text):
-        if text[pos] == " " and text[pos - 1] == " ":
-            pos += 1
+    while c < len(text):
+        print(text[c], end="")
+        if text[c] == "\n" or text[c] in ".?:":
+            if text[c] in ".?:":
+                print("\n")
+            c += 1
+            while c < len(text) and text[c] == ' ':
+                c += 1
             continue
-
-        new_text += text[pos]
-        if text[pos] in chars:
-            new_text += "\n\n"
-            pos += 1
-
-        pos += 1
-
-    print(new_text, end="")
+        c += 1
