@@ -31,6 +31,12 @@ def text_indentation(text):
         if text[pos] == " " and text[pos - 1] == " ":
             pos += 1
             continue
+        if text[pos] == " " and text[pos - 1] == "\n":
+            pos += 1
+            continue
+        if text[pos] == " " and text[pos + 1] == "\n":
+            pos += 1
+            continue
         new_text += text[pos]
         if text[pos] in chars:
             new_text += "\n\n"

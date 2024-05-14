@@ -42,10 +42,10 @@ Test Case 5:
 	Cletos
 
 Test Case 6:
-	>> text_indentation("Really? Mine too.")
+	>>> text_indentation("Really? Mine too.")
 	Really?
 	<BLANKLINE>
-	Mine too
+	Mine too.
 	<BLANKLINE>
 
 Test Case 7:
@@ -87,10 +87,12 @@ Test Case 7:
 	Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
 Test Case 8:
-	>>> text_indentation("This     is: an excessive     space  text") 
-	This is:
+	>>> text_indentation("This\n     is: an \nexcessive     space  text") #doctest: +REPORT_NDIFF
+	This
+	is:
 	<BLANKLINE>
-	an excessive space text
+	an
+	excessive space text
 
 Test Case 9:
 	>>> text_indentation("Boa tarde. Chamo-me Cletos e sou um estudante de engenharia. "
