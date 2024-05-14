@@ -21,20 +21,23 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
 
-    c = 0
+    pos = 0
     new_text = ""
     chars = (".", ":", "?")
 
-    while c < len(text) and text[c] == ' ':
-        c += 1
+    while pos < len(text) and text[pos] == " ":
+        pos += 1
 
-    while c < len(text):
-        print(text[c], end="")
-        if text[c] == "\n" or text[c] in ".?:":
-            if text[c] in ".?:":
-                print("\n")
-            c += 1
-            while c < len(text) and text[c] == ' ':
-                c += 1
+    while pos < len(text):
+        if text[pos] == " " and text[pos - 1] == " ":
+            pos += 1
             continue
-        c += 1
+
+        new_text += text[pos]
+        if text[pos] in chars:
+            new_text += "\n\n"
+            pos += 1
+
+        pos += 1
+
+    print(new_text, end="")
