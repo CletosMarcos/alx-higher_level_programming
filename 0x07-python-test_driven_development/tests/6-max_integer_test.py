@@ -28,4 +28,4 @@ class TestMaxInteger(unittest.TestCase):
             max_integer([1, 2, e])
 
     def test_strings(self):
-        self.assertEqual(max_integer("lsdfg9"), s)
+        self.assertEqual(max_integer("lsdfg9"), "s")
