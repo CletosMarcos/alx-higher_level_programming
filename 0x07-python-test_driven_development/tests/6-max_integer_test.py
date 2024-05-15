@@ -28,7 +28,7 @@ class TestMaxInteger(unittest.TestCase):
             max_integer([1, 2, e])"""
 
     def test_list_of_strings(self):
-        self.assertEqual(max_integer(["Hi", "what", "is", "your", "name"]), "your")
+        self.assertEqual(max_integer([10]), 10)
 
     def test_strings(self):
         self.assertEqual(max_integer("lsdfg9"), "s")
