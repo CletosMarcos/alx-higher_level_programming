@@ -25,7 +25,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_undefined_variable(self):
         with self.assertRaises(NameError):
-            max_integer([1, 2, E])
+            max_integer([1, 2, e])
 
     def test_strings(self):
         self.assertEqual(max_integer("lsdfg9"), s)
