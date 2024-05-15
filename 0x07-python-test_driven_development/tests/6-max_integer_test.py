@@ -13,7 +13,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1.4, 10.3, 3.0, 90.0, 23.9, 90.01]), 90.01)
         self.assertEqual(max_integer([1.1, 2.5, 5.001, 5.0001]), 5.001)
 
-    """def test_ints_and_floats(self):
+    def test_ints_and_floats(self):
         self.assertEqual(maxx_integer([1, 2, 2.1, 6, 9.0, 9.1, 8], 9.1))
 
     def test_no_argument(self):
@@ -33,8 +33,4 @@ class TestMaxInteger(unittest.TestCase):
             max_integer([1, 2, E])
 
     def test_strings(self):
-        self.assertEqual(max_integer("lsdfg9"))
-
-if __name__ == "__main__":
-    unittest.main()"""
-    pass
+        self.assertEqual(max_integer("lsdfg9"), s)
