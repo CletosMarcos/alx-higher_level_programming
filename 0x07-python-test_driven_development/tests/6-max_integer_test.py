@@ -23,10 +23,6 @@ class TestMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer([1, 2, "3"])
 
-    """def test_undefined_variable(self):
-        with self.assertRaises(NameError):
-            max_integer([1, 2, e])"""
-
     def test_list_of_strings(self):
         self.assertEqual(max_integer([10]), 10)
 
