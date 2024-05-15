@@ -10,9 +10,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([9, 8, 7, 6]), 9)
 
     def test_floats(self):
-        """self.assertEqual(max_integer
-        ([1.4, 10.3, 3.0, 90.0, 23.9, 90.01]), 90.01)"""
-        self.assertEqual(max_integer([1.1, 2.5, 5.001, 5.0001]), 5.0001)
+        self.assertEqual(max_integer([1.4, 10.3, 3.0, 90.0, 23.9, 90.01]), 90.01)
+        self.assertEqual(max_integer([1.1, 2.5, 5.001, 5.0001]), 5.001)
 
     """def test_ints_and_floats(self):
         self.assertEqual(maxx_integer([1, 2, 2.1, 6, 9.0, 9.1, 8], 9.1))
