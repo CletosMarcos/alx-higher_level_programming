@@ -9,11 +9,11 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertEqual(max_integer([9, 8, 7, 6]), 9)
 
-    """def test_floats(self):
+    def test_floats(self):
         self.assertEqual(max_integer([1, 10, 0, 3, 90, 23, 90.01]), 90.01)
         self.assertEqual(max_integer([1.1, 2.5, 5.001, 5.0001]), 5.0001)
 
-    def test_ints_and_floats(self):
+    """def test_ints_and_floats(self):
         self.assertEqual(maxx_integer([1, 2, 2.1, 6, 9.0, 9.1, 8], 9.1))
 
     def test_no_argument(self):
