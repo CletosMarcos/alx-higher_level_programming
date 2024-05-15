@@ -32,3 +32,6 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_strings(self):
         self.assertEqual(max_integer("lsdfg9"))
+
+if __name__ == __"main"__:
+    unittest.main()
