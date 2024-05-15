@@ -14,13 +14,12 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1.1, 2.5, 5.001, 5.0001]), 5.001)
 
     def test_ints_and_floats(self):
-        self.assertEqual(maxx_integer([1, 2, 2.1, 6, 9.0, 9.1, 8]), 9.1)
+        self.assertEqual(max_integer([1, 2, 2.1, 6, 9.0, 9.1, 8]), 9.1)
 
     def test_no_argument(self):
         self.assertIsNone(max_integer())
 
-
-    def test_mix_values_and_strings(self)
+    def test_mix_values_and_strings(self):
         with self.assertRaises(TypeError):
             max_integer([1, 2, "3"])
 
