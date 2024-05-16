@@ -59,7 +59,7 @@ def matrix_mul(m_a, m_b):
             raise TypeError("each row of m_b must be of the same size")
 
     if len(m_a[0]) != len(m_b):
-        raise ValueErro("m_a and m_b can't be multiplied")
+        raise ValueError("m_a and m_b can't be multiplied")
 
 
     #  Solve matrix mult
