@@ -3,6 +3,6 @@
 """A empty rectangle class"""
 
 
-class Rectangle:
+class Rectangle():
     """Defines a simple rectangle that does nothing"""
     pass
