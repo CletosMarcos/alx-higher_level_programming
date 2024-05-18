@@ -10,7 +10,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        self.number_of_instances += 1 #  increment on instance creation
+        Rectangle.number_of_instances += 1 #  increment on instance creation
 
     @property
     def width(self):
@@ -60,9 +60,9 @@ class Rectangle:
         return ""
 
     def __repr__(self):
-        return f"Rectangle({self.width}, {self.heigh})"
+        return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
         """Prints a message when an instance of Rectangle is deleted"""
-        self.number_of_instances -= 1 #  decrement on instance deletion
+        Rectangle.number_of_instances -= 1 #  decrement on instance deletion
         print("Bye rectangle...")
