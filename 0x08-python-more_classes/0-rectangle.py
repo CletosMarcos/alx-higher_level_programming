@@ -3,5 +3,10 @@
 
 
 class Rectangle:
-    """ Defines a simple rectangle that does nothing"""
+    """
+
+    Defines a simple rectangle class
+    that does nothing
+
+    """
     pass
