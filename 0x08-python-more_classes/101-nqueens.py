@@ -27,13 +27,13 @@ def init_board(n):
     board = []
     [board.append([]) for i in range(n)]
     [row.append(' ') for i in range(n) for row in board]
-    return board
+    return (board)
 
 def board_deepcopy(board):
     """Returns a deepcopy of a chessboard."""
     if isinstance(board, list):
         return list(map(board_deepcopy, board))
-    return board
+    return (board)
 
 def get_solution(board):
     """Returns the list of lists representation of a solved chessboard."""
@@ -43,7 +43,7 @@ def get_solution(board):
             if board[r][c] == "Q":
                 solution.append([r, c])
                 break
-    return solution
+    return (solution)
 
 def xout(board, row, col):
     """X out spots on a chessboard.
