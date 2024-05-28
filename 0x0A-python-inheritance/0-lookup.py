@@ -9,4 +9,4 @@ def lookup(obj):
         obj: object to be considered
         """
 
-    return list(sorted(obj.__dict__))
+    return dir(obj)
