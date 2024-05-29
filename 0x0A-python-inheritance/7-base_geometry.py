@@ -21,7 +21,7 @@ class BaseGeometry:
     def integer_validator(self, name, value):
         """
             validates value
-            
+
             args:
                 name: always a string
                 value:
