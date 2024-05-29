@@ -26,3 +26,28 @@ Test Case:
 
 	>>> print(my_list)
 	[1, 4, 2, 3, 5]
+
+	>>> str_list = MyList()
+
+	>>> str_list.append("Hello")
+
+	>>> str_list.append("Hi")
+
+	>>> str_list.append(23)
+	
+	>>> print(str_list)
+	['Hello', 'Hi', 23]
+
+	>>> a = []
+	>>> my_list = MyList(a)
+	>>> my_list.print_sorted()
+	[]
+
+	>>> my_l = MyList()
+	>>> my_l.append(5)
+	>>> my_l.append(1)
+	>>> my_l.append(-1)
+	>>> my_l.append(51)
+	>>> my_l.append(-5)
+	>>> my_l.print_sorted()
+	[-5, -1, 1, 5, 51]
