@@ -13,7 +13,7 @@ class Square(Rectangle):
                 __str__: return the square representation
     """
 
-    def __init__(self, size:
+    def __init__(self, size):
         """
             Initializes the square size
             using <integer_validator> to validade size
