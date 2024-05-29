@@ -3,4 +3,8 @@
 
 
 class base_geometry:
+    """
+        empty class
+    """
+
     pass
