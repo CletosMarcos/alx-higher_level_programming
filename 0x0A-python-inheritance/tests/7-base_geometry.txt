@@ -57,3 +57,26 @@ Test Case 11: Passing one argument to area method
 	>>> bg.area(5)
 	Traceback (most recent call last):
 	TypeError: area() takes 1 positional argument but 2 were given
+
+Test Case 12: Passing tuple to method
+	>>> bg.integer_validator("age", (4,))
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+
+Test Case 13: Passing list to method
+	>>> bg.integer_validator("age", [3])
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+
+Test Case 14: Passing dict to method
+	>>> bg.integer_validator("age", {3, 4})
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+
+Test Case 15: Passing None to method
+	>>> bg.integer_validator("age", None)
+	Traceback (most recent call last):
+	TypeError: age must be an integer
