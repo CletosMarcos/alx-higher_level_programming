@@ -77,9 +77,9 @@ Test Case 14: Passing dict to method
 
 
 Test Case 15: Passing None to method
-	#>>> bg.integer_validator("age", None)
-	#Traceback (most recent call last):
-	#TypeError: age must be an integer
+	>>> bg.integer_validator("age", None)
+	Traceback (most recent call last):
+	TypeError: age must be an integer
 
 Test Case 16: Trying to pass a boolean value
 	#>>> bg.integer_validator("name", True)
@@ -90,7 +90,3 @@ Test Case 17: Passing three arguments to integer_validator
 	#>>> bg.integer_validator("name", 1, 2)
 	#Traceback (most recent call last):
 	#TypeError: integer_validator() takes 3 positional arguments but 4 were given
-
-        >>> bg.integer_validator( ,2)
-        Traceback (most recent call last):
-        TypeError: integer_validator() missing 1 required positional argument: 'name'
