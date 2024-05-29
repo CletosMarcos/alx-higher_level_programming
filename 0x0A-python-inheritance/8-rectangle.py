@@ -10,8 +10,14 @@ class BaseGeometry:
                 area(): raises an exception with the
                 msg "area() is not implemented"
     """
-    
+
     def __init__(self, width, height):
+        """
+            Initializes the width and height
+            and making sure the values are valid by using the
+            method <integer_validator>
+        """
+
         self.integer_validator("width", width)
         self.__width = width
         self.integer_validator("height", height)
