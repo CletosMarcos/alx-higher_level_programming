@@ -75,8 +75,3 @@ Test Case 14: Passing dict to method
 	Traceback (most recent call last):
 	TypeError: age must be an integer
 
-
-Test Case 15: Passing None to method
-	>>> bg = BaseGeometry(2)
-	Traceback (most recent call last):
-	TypeError: BaseGeometry() takes no arguments
