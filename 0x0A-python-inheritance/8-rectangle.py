@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-""" module that defines a class BaseGeometry"""
+""" module that defines a class Rectangle"""
 
 BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """
-        defines a method that raises an exception
-
-        methods:
-                area(): raises an exception with the
-                msg "area() is not implemented"
+        defines a Rectangle
+        
+        args:
+            width
+            height
     """
 
     def __init__(self, width, height):
