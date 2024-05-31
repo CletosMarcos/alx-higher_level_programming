@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
     defines a function save_to_json_file()
-    
+
     The function:
         save_to_json_file(my_obj, filename)
 """
