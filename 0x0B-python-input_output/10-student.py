@@ -12,18 +12,19 @@ class Student:
 
     def to_json(self, attrs=None):
         """Retrieves a dictionary representation of a Student instance
-            
+
             args:
                 attr: If attrs is a list of strings, only attribute names
                 contained in this list must be retrieved.
-                
+
                 Otherwise, all attributes must be retrieved
             """
-    
+
         retrieved = {}
 
         if type(attrs) is list and all(isinstance(pos, str) for pos in attrs):
-            retrieved = {key: self.__dict__[key] for key in attrs if key in self.__dict__}
+            retrieved = {key: self.__dict__[key] for key in attrs
+                         if key in self.__dict__}
             return retrieved
 
         return self.__dict__
