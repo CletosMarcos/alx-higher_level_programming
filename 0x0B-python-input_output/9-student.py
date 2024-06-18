@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Defines a class Student"""
 
 
@@ -12,6 +11,6 @@ class Student:
         age = age
 
     def to_json(self):
-        """ retrieves a dictionary representation of a Student instance"""
+        """Retrieves a dictionary representation of a Student instance"""
 
-        return type(self).__dict__
+        return self.__dict__
