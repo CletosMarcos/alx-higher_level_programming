@@ -3,6 +3,9 @@
 
 
 class Base:
+    """The goal of this class is to manage `id` attribute in all your future
+    classes and to avoid dulicating the same code"""
+
     __nb_objects = 0
 
     def __init__(self, id=None):
