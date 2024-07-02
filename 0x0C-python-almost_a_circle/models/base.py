@@ -17,7 +17,17 @@ class Base:
         """
 
         if id is not None:
-            self.id = id
+            self.__id = id
         else:
             Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+            self.__id = Base.__nb_objects
+
+    @property
+    def id(self):
+        return self.__id
+
+    @id.setter
+    def id(self, value):
+        if not isinstance(value, int):
+            raise TypeError("id must be an integer")
+        self.__id = value
