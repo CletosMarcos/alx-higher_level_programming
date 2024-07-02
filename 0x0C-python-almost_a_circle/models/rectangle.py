@@ -77,8 +77,13 @@ class Rectangle(Base):
 
     def display(self):
         """ prints in stdout the Rectangle instance with the character #"""
+        x = " " * self.x  # number of columns to skip
+        y = "\n" * self.y  # number of lines to skip
+
+        print(y, end='')
+
         for i in range(self.height):
-            print("#" * self.width)
+            print(x, "#" * self.width)
 
     def __str__(self):
         """override to return [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
