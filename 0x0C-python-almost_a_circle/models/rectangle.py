@@ -89,3 +89,16 @@ class Rectangle(Base):
         """override to return [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
                 self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """assigns an argument to each attribute
+
+            * 1st argument should be the id attribute
+            * 2nd argument should be the width attribute
+            * 3rd argument should be the height attribute
+            * 4th argument should be the x attribute
+            * 5th argument should be the y attribute"""
+
+        attr_list = [self.id, self.width, self.height, self.x, self.y]
+        for arg in range(args):
+            attr_list[arg] = args[arg]
