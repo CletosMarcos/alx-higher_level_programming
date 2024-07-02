@@ -79,3 +79,7 @@ class Rectangle(Base):
     def id(self, value):
         if not isinstance(value, int):
             raise TypeError("id must be an integer")
+
+    def area(self):
+        """ returns the area value of the Rectangle instance"""
+        return self.height * self.width
