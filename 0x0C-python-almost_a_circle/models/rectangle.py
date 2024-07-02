@@ -92,7 +92,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute
-            
+
             When using *args:
             * 1st argument should be the id attribute
             * 2nd argument should be the width attribute
@@ -105,5 +105,5 @@ class Rectangle(Base):
             for arg in range(len(args)):
                 setattr(self, attr_list[arg], args[arg])
         else:
-            for k,v in kwargs.items():
+            for k, v in kwargs.items():
                 setattr(self, k, v)
