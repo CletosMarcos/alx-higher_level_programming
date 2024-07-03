@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Defines a base class of all other classes in this project"""
+import json
 
 
 class Base:
@@ -31,3 +32,10 @@ class Base:
         if not isinstance(value, int):
             raise TypeError("id must be an integer")
         self.__id = value
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        if not list_dictionaries:
+            return "[]"
+
+        return json.dumps(list_dictionaries)
