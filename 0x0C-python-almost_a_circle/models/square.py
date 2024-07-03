@@ -35,8 +35,8 @@ class Square(Rectangle):
         **kwargs must be skipped if *args exists and is not empty"""
         if not args:
             for k, v in kwargs.items():
-                setattr(self, self.k, v)
+                setattr(self, k, v)
         else:
             attr_list = ["id", "size", "x", "y"]
             for arg in range(args):
-                setattr(self, self.attr_list[arg], args[arg])
+                setattr(self, attr_list[arg], args[arg])
