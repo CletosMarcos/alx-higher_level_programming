@@ -26,7 +26,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Assigns attributes
-        
+
         *args is the list of arguments - no-keyworded arguments
             1st argument should be the id attribute
             2nd argument should be the size attribute
@@ -39,4 +39,4 @@ class Square(Rectangle):
                 setattr(self, attr_list[arg], args[arg])
         else:
             for k, v in kwargs.items():
-                setattr(self, k, v)i
+                setattr(self, k, v)
