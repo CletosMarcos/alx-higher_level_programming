@@ -33,10 +33,10 @@ class Square(Rectangle):
             3rd argument should be the x attribute
             4th argument should be the y attribute
         **kwargs must be skipped if *args exists and is not empty"""
-        if not args:
-            for k, v in kwargs.items():
-                setattr(self, k, v)
-        else:
+        if args:
             attr_list = ["id", "size", "x", "y"]
-            for arg in range(args):
+            for arg in range(len(args)):
                 setattr(self, attr_list[arg], args[arg])
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)i
