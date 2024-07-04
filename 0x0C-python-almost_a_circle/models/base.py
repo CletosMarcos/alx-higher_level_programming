@@ -67,4 +67,5 @@ class Base:
                 dummy_instance = cls(1, 1)
             else:
                 dummy_instance = cls(1)
-            return dummy_instance.update(**dictionary)
+            dummy_instance.update(**dictionary)
+            return dummy_instance
