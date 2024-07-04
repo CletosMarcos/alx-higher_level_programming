@@ -24,6 +24,7 @@ class TestBase_instantiation(unittest.TestCase):
     def test_no_arg(self):
         b1 = Base()
         b2 = Base()
+        self.assertIsInstance(b1.id, int)
         self.assertEqual(b1.id, b2.id - 1)
 
     def test_three_bases(self):
