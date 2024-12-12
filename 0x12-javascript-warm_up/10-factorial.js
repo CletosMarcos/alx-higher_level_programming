@@ -1,18 +1,16 @@
 #!/usr/bin/node
 
-function factorial (value) {
-  let accumulator = 1;
-  value = parseInt(value);
-
-  if (!value) {
+function factoria (value) {
+  if (value === 0 || value === 1) {
     return 1;
   }
-  while (value > 0) {
-    accumulator *= value;
-    value--;
-  }
-  return accumulator;
+  return value *= factoria(value - 1);
 }
 
-const factNr = process.argv[2];
-console.log(factorial(factNr));
+const factNr = parseInt(process.argv[2]);
+
+if (factNr) {
+  console.log(factoria(factNr));
+} else {
+  console.log(1)
+}
