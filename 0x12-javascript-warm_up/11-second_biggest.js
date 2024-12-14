@@ -2,7 +2,7 @@
 
 const argList = process.argv;
 
-if (argList.length < 3) {
+if (argList.length < 4) {
   console.log(0);
 } else {
   const secondBiggest = argList.length - 2;
